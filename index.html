@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -10,9 +10,10 @@
      <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
  </head>
-
+ 
 <body>
-    <header>
+    
+    <section> 
         <div id="nav">
             <h4>RockerAir</h4>
             <div id="links">
@@ -24,9 +25,10 @@
                 <i class="ri-menu-line"></i>
             </div>
         </div>
-    </header>
-    
+        
     <div id="main"  >
+        
+        
         <div id="hero">
             <div class="row">
                 <h1 class="rowtxts">Digital</h1>
@@ -40,7 +42,11 @@
             </div>
             <p>check out the hype <i class="ri-arrow-down-line"></i></p>
         </div>
+        
         <div id="content" class="smooth-scroll">
+            
+           
+            
             <div id="video"  >
                 <div class="circle">
                     <h4>Play</h4>
@@ -312,6 +318,7 @@
             </div>
         </div>
     </div>
+</section>
      
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"
         integrity="sha512-GQ5/eIhs41UXpG6fGo4xQBpwSEj9RrBvMuKyE2h/2vw3a9x85T1Bt0JglOUVJJLeyIUl/S/kCdDXlE/n7zCjIg=="
@@ -322,6 +329,24 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script src="index.js"></script>
+    <script>
+        var lastscrolltop=0;
+        var nav=document.querySelector("#nav")
+        window.addEventListener("scroll", function(){
+            var scrolltop=window.pageYOffset || document.documentElement.scrolltop;
+            if(scrolltop>lastscrolltop){
+                nav.style.top="-60px"
+                console.log("upr")
+                console.log( scrolltop)
+
+            }else{
+                nav.style.top="0px"
+                console.log("neeche")
+
+            }
+            lastscrolltop=scrolltop;
+        })
+    </script>
 
 </body>
 
